@@ -30,21 +30,29 @@ export function App() {
 
   return (
     <section className='App'>
-      {
-        users.map(user => {
-          const {userName, name, isFollowing} = user;
-          return(
-            <TwitterFollowCard 
-              key={userName}
-              userName={userName}
-              initialIsFollowing={isFollowing}
-              formattedUserName={format}
-            >
-              {name}
-            </TwitterFollowCard>
-          )
-        })
-      }
+      <div className='tw-followCard-title tw-pd'>
+        <h2>A quien Seguir</h2>
+      </div>
+      <div>
+        {
+          users.map(user => {
+            const { userName, name, isFollowing } = user;
+            return (
+              <TwitterFollowCard
+                key={userName}
+                userName={userName}
+                initialIsFollowing={isFollowing}
+                formattedUserName={format}
+              >
+                {name}
+              </TwitterFollowCard>
+            )
+          })
+        }
+      </div>
+      <a href="#" className='tw-followCard-viewMore is-hover'>
+        <div>Mostrar mas</div>
+      </a>
     </section>
   )
 }

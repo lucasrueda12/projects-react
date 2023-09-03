@@ -13,8 +13,8 @@ export function TwitterFollowCard({ children ,formattedUserName, userName='unkno
     }
 
   return (
-    <article className='tw-followCard'>
-      <header className='tw-followCard-header'>
+    <article className='tw-followCard is-hover'>
+      <header className='tw-followCard-header tw-pd-tb'>
         <img className='tw-followCard-avatar' src={`https://unavatar.io/${userName}`} alt={`El avatar de ${userName}`} />
         <div className='tw-followCard-info'>
           <strong>{children}</strong>
